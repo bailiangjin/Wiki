@@ -8,6 +8,25 @@ public class Sort {
 
     private static int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1};
 
+
+    /**
+     * 插入排序
+     * @param array
+     */
+    public static void insertSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (array[j - 1] < array[j]) {
+                    break;
+                }
+                int temp = array[j - 1];
+                array[j - 1] = array[j];
+                array[j] = temp;
+            }
+        }
+
+    }
+
     /**
      * 冒泡排序
      *
@@ -98,7 +117,8 @@ public class Sort {
 
         //bubbleSort(array);
         //simpleSelectSort(array);
-        quickSort(array, 0, array.length - 1);
+        insertSort(array);
+        //quickSort(array, 0, array.length - 1);
 
         printArray(array);
     }
