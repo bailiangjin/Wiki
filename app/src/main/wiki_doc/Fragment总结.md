@@ -23,4 +23,8 @@
 
 ## 2 Fragment 生命周期
 
+## 3 Fragment 用途
+
+### 3.1 DialogFragment实现蒙层
+
 
