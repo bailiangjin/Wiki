@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 
 read -p "Please enter search dir > " search_dir
-echo "Search DIR： $earch_dir"
+echo "Search DIR： $search_dir"
 
 read -p "Please enter aimed dir > " aimed_dir
 echo "Aimed DIR： $aimed_dir"
@@ -32,6 +32,8 @@ esac
 
 
 find $search_dir -iname "*${file_type}"| xargs -J % cp -rp % $aimed_dir
+
+echo "done!"
 
 
 
